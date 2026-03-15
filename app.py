@@ -14,7 +14,7 @@ if st.button("Format Text"):
     # Ensure there is actually text to process
     if user_text:
         # 3. The Backend Interaction: Execute your logic
-        processed_html = re.sub(r'[a-zA-Z]+', bionic_bold, user_text)
+        processed_html = re.sub(r'[a-zA-ZÀ-ÿ]+', bionic_bold, user_text)
         
         # 4. The Output: Render the HTML safely
         st.markdown(processed_html, unsafe_allow_html=True)
